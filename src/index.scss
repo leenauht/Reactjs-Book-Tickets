@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clip-path-custom {
+  clip-path: polygon(30px 0%, calc(100% - 30px) 0%, 100% 100%, 0% 100%);
+}
