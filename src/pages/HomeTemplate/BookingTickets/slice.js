@@ -18,7 +18,11 @@ const bookingTicketsSlice = createSlice({
       if (index !== -1) {
         listSeatsSelectedClone.splice(index, 1);
       } else {
-        listSeatsSelectedClone.push(payload);
+        if (listSeatsSelectedClone.length < 10) {
+          listSeatsSelectedClone.push(payload);
+        } else {
+          alert("Bạn chỉ được đặt tối đa 10 ghế!");
+        }
       }
       state.listSeatsSelected = listSeatsSelectedClone;
     },
